@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:id="@android:id/tabhost" 
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent"> 
+  <TabWidget android:id="@android:id/tabs" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+  /> 
+  <FrameLayout android:id="@android:id/tabcontent" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    android:paddingTop="62px" 
+  >
+   <ListView android:id="@+id/taskList" 
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content" 
+    />  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:orientation="vertical" 
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent"
+  android:id="@+id/options" 
+  > 
+  <LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    > 
+    <TextView  
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:text="Task: " 
+      /> 
+    <EditText android:id="@+id/task" 
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content" 
+      /> 
+  </LinearLayout> 
+  <LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    > 
+    <TextView  
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:text="Location:" 
+      /> 
+    <Spinner android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    />
+  </LinearLayout> 
+  <Button android:id="@+id/save" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:text="Save" 
+  /> 
+  <Button android:id="@+id/dicon" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:text="Delete" 
+   /> 
+    <LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    > 
+    <TextView  
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:text="Details:" 
+      /> 
+    <EditText android:id="@+id/detail" 
+      android:layout_width="fill_parent" 
+      android:layout_height="fill_parent" 
+      android:autoText="true"
+      /> 
+  </LinearLayout> 
+</LinearLayout>
+</FrameLayout> 
+</TabHost> 
