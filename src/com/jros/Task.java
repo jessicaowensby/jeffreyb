@@ -1,8 +1,20 @@
 package com.jros;
 
+import java.util.List;
+
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mdt.rtm.ApplicationInfo;
+import com.mdt.rtm.Invoker;
+import com.mdt.rtm.ServiceException;
+import com.mdt.rtm.ServiceImpl;
+import com.mdt.rtm.data.RtmAuth;
+import com.mdt.rtm.data.RtmFrob;
+import com.mdt.rtm.data.RtmTask;
+import com.mdt.rtm.data.RtmTasks;
+import com.mdt.rtm.data.RtmUser;
 
 public class Task { 
   private String task=""; 
@@ -59,7 +71,7 @@ public class Task {
 	  return(db.rawQuery("SELECT * FROM tasks ORDER BY task", null)); 
   }
   
-  Task loadFrom(Cursor c) { 
+  Task loadFrom(Cursor c) { 	  
 	  task=c.getString(c.getColumnIndex("task")); 
 	  location=c.getString(c.getColumnIndex("location")); 
 	  detail=c.getString(c.getColumnIndex("detail")); 
